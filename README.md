@@ -1,16 +1,53 @@
-## Hi there 👋
+# Church Attendance Analysis (Excel)
 
-<!--
-**therealbadmus/therealbadmus** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+An end-to-end Excel analysis of multi-campus church attendance data: from a messy raw dataset to a cleaned, validated dataset and an interactive dashboard.
 
-Here are some ideas to get you started:
+## Project Overview
+- **Dataset:** weekly Sunday Service attendance records for CCI, roughly 2,291 rows across 45 campuses in Nigeria, North America, and Europe
+- **Fields:** date of service, campus, continent, service type, male adults, female adults, teenagers, kids, overall total, comments
+- **Tool:** Microsoft Excel (PivotTables, slicers, lookup formulas, conditional formatting)
+- **Goal:** clean the data so it can be trusted, then build a dashboard showing attendance trends, campus performance, and audience composition
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Data Quality Issues Found
+| Issue | How it was handled |
+|---|---|
+| Dates stored as text, inconsistent formats | Converted to real date values; verified with `ISNUMBER()` |
+| Category counts not matching the total | Added a Match/Mismatch validation column and highlighted mismatches with conditional formatting |
+| Blanks, negative numbers, and text in numeric columns | Recalculated only where the value could be derived from the other figures in the row; otherwise left blank and documented |
+| Hidden characters (e.g., "Sunday Service" appearing twice in the slicer) | Diagnosed with `EXACT()`, corrected the affected cells |
+| Blank campus names | Labelled "Unspecified" |
+| Duplicate records | Checked on Date + Campus + Service Type, not on numeric columns |
+| Campuses missing a continent | Built a Campus-to-Continent lookup table |
+
+> Principle followed: no data was invented. Values that could not be derived were left blank and flagged, not guessed.
+
+## What I Built
+- Campus-to-Continent mapping table with lookup formulas
+- Derived columns: Month, Quarter, Year
+- PivotTables for attendance trends, campus comparison, continent comparison, and demographic breakdown
+- Interactive dashboard with slicers (Campus, Continent, Service Type, Date, Month, Quarter, Year), KPI cards, and charts
+
+## Key Insights
+*(Fill these in with your final numbers. 3 to 5 findings, each with a "so what".)*
+1. **[Finding, e.g., which campus has the highest average attendance]:** [what it suggests / recommendation]
+2. **[Finding on the time trend, e.g., which quarter is highest or lowest]:** [recommendation]
+3. **[Finding on demographics, e.g., share of kids and teens vs adults]:** [recommendation]
+4. **[Finding on continents, e.g., average per campus by continent]:** [recommendation]
+
+## Limitations
+- Some records have missing values that could not be recovered, so they are excluded from breakdowns where the relevant field is blank
+- Campuses differ in size and maturity, so comparing totals across continents is not like-for-like
+
+## Repository Contents
+```
+/data           cleaned dataset (Excel)
+/screenshots    dashboard and PivotTable images
+/docs           data cleaning notes
+README.md
+```
+
+## Skills Demonstrated
+Data cleaning and validation, lookup tables (VLOOKUP/XLOOKUP), PivotTables, slicers, conditional formatting, dashboard design, documentation
+
+## Author
+Badmus Omotayo Oluwabusayomi | Data Analyst (entry-level) | Lagos, Nigeria
