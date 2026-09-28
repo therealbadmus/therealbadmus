@@ -28,11 +28,11 @@ An end-to-end Excel analysis of multi-campus church attendance data: from a mess
 - Interactive dashboard with slicers (Campus, Continent, Service Type, Date, Month, Quarter, Year), KPI cards, and charts
 
 ## Key Insights
-*(Fill these in with your final numbers. 3 to 5 findings, each with a "so what".)*
-1. **[Finding, e.g., which campus has the highest average attendance]:** [what it suggests / recommendation]
-2. **[Finding on the time trend, e.g., which quarter is highest or lowest]:** [recommendation]
-3. **[Finding on demographics, e.g., share of kids and teens vs adults]:** [recommendation]
-4. **[Finding on continents, e.g., average per campus by continent]:** [recommendation]
+
+1. 3 lagos campuses (Ikeja, Yaba and Ago) Campus has the highest attendance suggesting that we maintain and provide more resources to sustain growth
+2. Female adults make up 52% of the attendance while teenagers are critically low at less than 3% suggesting that we engage more men and teenagers while sustaining the female adult attendance. Probably launch a dedicated youth program. 
+3. November and April recorded the hghest and lowest attendance respectively which suggests that we investigate April attendance.
+4. Boston, Oshawa and barrie are significantly lower suggesting that we investigate why and develop a North America growth strategy
 
 ## Limitations
 - Some records have missing values that could not be recovered, so they are excluded from breakdowns where the relevant field is blank
